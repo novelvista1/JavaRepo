@@ -4,9 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-           commit_message: Auto commit
       - uses: actions/checkout@v2
       - name: Set up JDK 17
         uses: actions/setup-java@v2
@@ -25,3 +22,6 @@ jobs:
         env:
           SONAR_TOKEN: 282cdaa080e790779baa7b0dae8dd734f8e10050
         run: ./gradlew build sonarqube --info
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+           commit_message: Auto commit
