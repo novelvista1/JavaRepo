@@ -1,7 +1,7 @@
 public class Calculator {
 
     public double add(double a, double b) {
-        // this class is for adding
+        // this class is for adding - novelvista1
         return a + b;
     }
 
